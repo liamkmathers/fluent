@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "language": "Italian",
+    "description": "Curated high-value Italian gotchas — the little rules learners trip on most. Seeded into a learner's personal tricks-db via `tricks.py seed`; their own session-learned tricks accumulate alongside these.",
+    "source": "curated"
+  },
+  "tricks": [
+    {
+      "category": "prepositions",
+      "rule": "in for countries/regions, a for cities/towns",
+      "examples": ["Vivo in Svizzera / in Italia", "Vivo a Zurigo / a Roma"]
+    },
+    {
+      "category": "prepositions",
+      "rule": "di for where you're FROM (origin)",
+      "examples": ["Sono di Los Angeles", "Di dove sei?"]
+    },
+    {
+      "category": "prepositions",
+      "rule": "da = at someone's place / since / by",
+      "examples": ["Vado da Marco (to Marco's)", "Abito qui da due anni (for two years)"]
+    },
+    {
+      "category": "vocabulary",
+      "rule": "Country vs nationality: Svizzera (the country, f.) vs svizzero (a Swiss person / adj.)",
+      "examples": ["Vivo in Svizzera", "Lui è svizzero"]
+    },
+    {
+      "category": "vocabulary",
+      "rule": "Nationalities & languages are lowercase",
+      "examples": ["Parlo italiano", "Sono americano"]
+    },
+    {
+      "category": "false_friends",
+      "rule": "caldo = hot (NOT cold); freddo = cold",
+      "examples": ["Ho caldo = I'm hot", "Fa freddo = it's cold"]
+    },
+    {
+      "category": "false_friends",
+      "rule": "Common false friends: parenti = relatives (not parents → genitori); libreria = bookshop (library → biblioteca); fattoria = farm (factory → fabbrica); morbido = soft (not morbid)",
+      "examples": ["I miei parenti = my relatives", "una libreria = a bookshop"]
+    },
+    {
+      "category": "verbs",
+      "rule": "essere vs stare: essere = identity/permanent; stare = state/how you are + location idioms",
+      "examples": ["Sono stanco (I am tired)", "Come stai? (how are you?)", "Sto a casa"]
+    },
+    {
+      "category": "verbs",
+      "rule": "sapere vs conoscere: sapere = know a fact / know how to; conoscere = be acquainted with a person/place",
+      "examples": ["So nuotare (I know how to swim)", "Conosco Maria / Roma"]
+    },
+    {
+      "category": "verbs",
+      "rule": "piacere agrees with the thing liked, not the person: mi piace (sing.) / mi piacciono (pl.)",
+      "examples": ["Mi piace il caffè", "Mi piacciono i gatti"]
+    },
+    {
+      "category": "adjectives",
+      "rule": "buono (adjective, 'good') vs bene (adverb, 'well')",
+      "examples": ["È un buon caffè", "Sto bene / Parlo bene"]
+    },
+    {
+      "category": "adjectives",
+      "rule": "molto is invariable as an adverb ('very'), but agrees as an adjective ('much/many')",
+      "examples": ["molto bello (very)", "molti amici (many)"]
+    },
+    {
+      "category": "gender",
+      "rule": "Watch gender traps: il problema / il tema / il programma are masculine despite -a; la mano is feminine despite -o",
+      "examples": ["il problema difficile", "la mano destra"]
+    },
+    {
+      "category": "grammar",
+      "rule": "Double negative is required: non + niente/mai/nessuno",
+      "examples": ["Non ho niente (I have nothing)", "Non vado mai"]
+    },
+    {
+      "category": "grammar",
+      "rule": "c'è (there is) vs ci sono (there are)",
+      "examples": ["C'è un problema", "Ci sono due gatti"]
+    },
+    {
+      "category": "pronunciation",
+      "rule": "c/g are soft before e/i (ciao, gelato), hard before a/o/u (casa, gatto); che/chi and ghe/ghi restore the hard sound",
+      "examples": ["ciao (ch), casa (k)", "chi (k)"]
+    },
+    {
+      "category": "pronunciation",
+      "rule": "Double consonants are held longer and change meaning",
+      "examples": ["nonno (grandfather) vs nono (ninth)", "sette (seven) vs sete (thirst)"]
+    }
+  ]
+}

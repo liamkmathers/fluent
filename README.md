@@ -29,8 +29,16 @@ always taught **in context** (i+1 comprehensible input) with a grammar backbone,
 so you form real sentences from day one — never disconnected word lists.
 `/fluent-progress` shows your live **coverage %**. See [`curriculum/`](curriculum/).
 
-> Both features are additive — every original Fluent command still works. Credit
-> and thanks to [m98](https://github.com/m98) for the foundation. MIT licensed.
+### 🧠 Personal cheat-sheet — `/fluent-tips`
+The little rules-of-thumb you keep tripping on (*in* Svizzera vs *a* Zurigo,
+*caldo* = hot not cold, *mi piace* vs *mi piacciono*) are **captured automatically**
+from your session feedback into a personal, growing cheat-sheet. Comes with a
+curated Italian starter set of the highest-value gotchas. See `/fluent-tips`.
+
+> All additive — every original Fluent command still works, and the frequency
+> backbone now feeds new vocabulary across learn, vocab, speaking, writing, and
+> reading. Credit and thanks to [m98](https://github.com/m98) for the foundation.
+> MIT licensed.
 
 ---
 

@@ -49,6 +49,26 @@ Today we're practicing **speaking** through typed conversation. I'll ask you que
 **Ready? Let's chat!** 💬
 ```
 
+### 2b. Ground new vocabulary in frequency order
+
+When you hand the learner a **word-kit** or introduce any new word, don't pick
+from instinct — pull the most useful unlearned words from the curriculum so
+speaking reinforces the same frequency backbone as the rest of the system:
+
+```bash
+python3 "${CLAUDE_PLUGIN_ROOT:-${CLAUDE_PROJECT_DIR:-.}}/curriculum/next_items.py" select --n 8 --content-only --json
+```
+
+Build the topic's word-kit around these (plus the function words / grammar the
+learner already has), keep every prompt at i+1 (only known words + the new ones),
+and after the session `mark` any new words you introduced:
+
+```bash
+python3 "${CLAUDE_PLUGIN_ROOT:-${CLAUDE_PROJECT_DIR:-.}}/curriculum/next_items.py" mark --words "..."
+```
+
+If the curriculum is unavailable, fall back to sensible high-frequency choices.
+
 ### 3. Pick topic based on mastery
 
 A2 topics:

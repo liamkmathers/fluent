@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "language": "{target_language}",
+    "last_updated": "{YYYY-MM-DD}",
+    "total_tricks": 0
+  },
+  "tricks": [
+    {
+      "id": "{slug}",
+      "category": "{prepositions|vocabulary|false_friends|verbs|adjectives|gender|grammar|pronunciation}",
+      "rule": "{the reusable rule of thumb}",
+      "examples": ["{example 1}", "{example 2}"],
+      "learned_date": "{YYYY-MM-DD}",
+      "last_seen": "{YYYY-MM-DD}",
+      "times_reinforced": 1,
+      "source": "{session|curated}"
+    }
+  ]
+}

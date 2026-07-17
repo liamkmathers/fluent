@@ -70,7 +70,26 @@ These feed `mistakes-db.json`:
 - **Celebrate progress.** `"You didn't miss this last time — well done."` when `mistakes-db` shows improvement.
 - **Emojis on.** The learner's profile has `use_emojis: true` by default. Keep them.
 
-### 5. Hand score to SM-2
+### 5. Capture a "trick" when the correction generalizes
+
+If a correction carries a **rule of thumb the learner can reuse** — not a one-off
+typo — record it to their personal cheat-sheet so `/fluent-tips` can surface it
+later. Examples worth capturing: *in* vs *a* for places, a false friend, a gender
+trap, *piacere* agreement, *essere* vs *stare*.
+
+```bash
+python3 "${CLAUDE_PLUGIN_ROOT:-${CLAUDE_PROJECT_DIR:-.}}/curriculum/tricks.py" add \
+    --category prepositions \
+    --rule "in for countries, a for cities" \
+    --example "Vivo in Svizzera" --example "Vivo a Zurigo"
+```
+
+Use the same category labels as below. The helper dedupes: re-capturing an
+existing trick just bumps its reinforced count (so recurring mistakes float to
+the top of the cheat-sheet). **Skip** pure spelling/accent slips — those aren't
+tricks. One capture per generalizable rule, at most 1-2 per answer.
+
+### 6. Hand score to SM-2
 
 After scoring, feed the score into the SM-2 update via the `fluent-sm2-calculator` skill: `quality = floor(score / 2)`.
 

@@ -59,6 +59,13 @@ B2+ (350-500): editorials, technical explanations, interviews.
 
 Match the topic to `learner-profile.focus_areas` when possible.
 
+**Write at the learner's frequency level (i+1).** Compose the text mostly from
+words the learner already knows plus a controlled sprinkle of their next
+high-frequency words — not rare vocabulary that happens to fit the topic. That
+keeps reading comprehensible and reinforces the frequency backbone. In step 7,
+`mark` any genuinely new high-frequency words the text taught:
+`curriculum/next_items.py mark --words "..."`.
+
 ### 4. Present the text
 
 ```markdown

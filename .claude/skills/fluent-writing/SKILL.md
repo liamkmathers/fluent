@@ -39,6 +39,12 @@ From `mastery-db.skills_mastery`:
 
 Scenarios must match the learner's CEFR level — A2 uses everyday situations, B1+ adds opinion / complaint / inquiry.
 
+**Target the frequency backbone.** Pick scenarios that naturally exercise the
+learner's next high-frequency words, and keep any target vocabulary and your model
+answer within their frequency level (i+1 — mostly known words). Check the next
+words with `curriculum/next_items.py select --content-only --json`, and if the
+corrected version introduces genuinely new words worth keeping, `mark` them.
+
 ### 3. Present the task
 
 ```markdown
