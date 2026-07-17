@@ -26,11 +26,25 @@ Usage:
 
 Output (stdout): JSON with tier, scores, and per-word detail.
 """
+import os
+import sys
+
+
+def _use_project_venv():
+    """Re-exec under the project's .venv if present (for the STT-based heuristic
+    fallback, which needs faster-whisper). No-op if missing or already active."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    venv_dir = os.path.abspath(os.path.join(here, "..", ".venv"))
+    venv_py = os.path.join(venv_dir, "bin", "python3")
+    if os.path.exists(venv_py) and os.path.abspath(sys.prefix) != venv_dir:
+        os.execv(venv_py, [venv_py] + sys.argv)
+
+
+_use_project_venv()
+
 import argparse
 import difflib
 import json
-import os
-import sys
 
 
 def azure_assess(reference, audio_path, lang):

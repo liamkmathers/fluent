@@ -44,3 +44,9 @@ npm-debug.log*
 temp/
 *.json.tmp
 
+
+# Python virtualenv (project-local, do not commit)
+.venv/
+
+# Whisper model cache
+.cache/

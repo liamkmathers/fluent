@@ -44,7 +44,7 @@ python3 voice/pronounce.py --reference "vorrei un caffè" --record
 | `FLUENT_TTS_BACKEND` | `say` (default), `openai`, `elevenlabs`, `azure` | cloud = more natural voices |
 | `FLUENT_TTS_VOICE` | e.g. `Alice`, `Eddy`, `Flo` | macOS Italian voices |
 | `FLUENT_STT_BACKEND` | `faster-whisper` (default), `openai`, `azure` | |
-| `FLUENT_WHISPER_MODEL` | `base` (default), `small`, `medium` | bigger = more accurate, slower |
+| `FLUENT_WHISPER_MODEL` | `small` (default), `base`, `medium` | bigger = more accurate, slower. `base` mishears Italian (mangles *caffè*); `small` is the sweet spot. |
 | `AZURE_SPEECH_KEY` / `AZURE_SPEECH_REGION` | — | unlocks phoneme-level pronunciation scoring |
 | `OPENAI_API_KEY` | — | for OpenAI TTS/Whisper backends |
 | `ELEVENLABS_API_KEY` | — | for ElevenLabs TTS |

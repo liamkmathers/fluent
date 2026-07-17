@@ -19,16 +19,33 @@ Usage:
 
 Output (stdout): {"transcript": "...", "backend": "...", "audio_path": "..."}
 """
-import argparse
-import json
 import os
 import sys
+
+
+def _use_project_venv():
+    """Re-exec under the project's .venv if present, so callers can invoke this
+    with a bare `python3` and still get sounddevice/faster-whisper. No-op if the
+    venv is missing or we're already running inside it."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    venv_dir = os.path.abspath(os.path.join(here, "..", ".venv"))
+    venv_py = os.path.join(venv_dir, "bin", "python3")
+    # Compare sys.prefix (not the executable path) — the venv's python3 is a
+    # symlink to the base interpreter, so path comparison would false-match.
+    if os.path.exists(venv_py) and os.path.abspath(sys.prefix) != venv_dir:
+        os.execv(venv_py, [venv_py] + sys.argv)
+
+
+_use_project_venv()
+
+import argparse
+import json
 import tempfile
 import wave
 
 SAMPLE_RATE = 16000
 DEFAULT_BACKEND = os.environ.get("FLUENT_STT_BACKEND", "faster-whisper")
-DEFAULT_MODEL = os.environ.get("FLUENT_WHISPER_MODEL", "base")
+DEFAULT_MODEL = os.environ.get("FLUENT_WHISPER_MODEL", "small")  # 'small' is markedly better than 'base' for Italian
 
 
 # ---------- recording (silence auto-stop) ----------

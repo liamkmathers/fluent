@@ -3,7 +3,7 @@
 # Core (local, offline, free) — needed for --record and local transcription:
 sounddevice>=0.4.6        # mic capture (needs PortAudio: `brew install portaudio` if wheel fails)
 numpy>=1.24               # silence detection / audio buffer
-faster-whisper>=1.0       # local speech-to-text (downloads model on first run)
+faster-whisper>=1.0       # local speech-to-text (downloads 'small' model ~460MB on first run)
 
 # Optional cloud backends — only if you choose them via FLUENT_*_BACKEND:
 # openai>=1.0                              # OpenAI TTS + Whisper API
