@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "language": "Italian",
+    "principle": "Ordered by utility: the grammar you use in the highest share of everyday sentences comes first. Teach a rule only when the learner has met words that need it.",
+    "levels": "CEFR band is the level by which this rule should be solid, not a gate — a frequency-first learner meets most A-level grammar in the first weeks.",
+    "note": "The tutor introduces the next unmastered rule whose prerequisites are met, drills it in context, and logs it to mastery-db + spaced-repetition just like vocabulary."
+  },
+  "rules": [
+    {"rank": 1, "id": "subject_pronouns", "name": "Subject pronouns (io, tu, lui/lei, noi, voi, loro)", "cefr": "A1", "why": "Referenced by every conjugated verb; often dropped, so learners must recognize person from the verb.", "prereq": []},
+    {"rank": 2, "id": "essere_present", "name": "essere (to be) — present tense", "cefr": "A1", "why": "Most frequent verb; identity, location, description.", "prereq": ["subject_pronouns"]},
+    {"rank": 3, "id": "avere_present", "name": "avere (to have) — present tense", "cefr": "A1", "why": "Second most frequent verb; possession + builds the passato prossimo.", "prereq": ["subject_pronouns"]},
+    {"rank": 4, "id": "definite_articles", "name": "Definite articles (il, lo, la, l', i, gli, le)", "cefr": "A1", "why": "Every noun takes one; encodes gender + number.", "prereq": []},
+    {"rank": 5, "id": "indefinite_articles", "name": "Indefinite articles (un, uno, una, un')", "cefr": "A1", "why": "'a/an'; needed the moment you name any single thing.", "prereq": []},
+    {"rank": 6, "id": "noun_gender_number", "name": "Noun gender & plural formation (-o/-i, -a/-e, -e/-i)", "cefr": "A1", "why": "Drives article and adjective agreement across the whole language.", "prereq": ["definite_articles"]},
+    {"rank": 7, "id": "regular_are_present", "name": "Regular -are verbs — present (parlare)", "cefr": "A1", "why": "Largest verb class; unlocks hundreds of common verbs.", "prereq": ["subject_pronouns"]},
+    {"rank": 8, "id": "regular_ere_ire_present", "name": "Regular -ere / -ire verbs — present (credere, dormire, capire)", "cefr": "A1", "why": "Covers the remaining regular verbs, incl. -isc- (capisco).", "prereq": ["regular_are_present"]},
+    {"rank": 9, "id": "adjective_agreement", "name": "Adjective agreement & position", "cefr": "A1", "why": "Adjectives match gender+number; most follow the noun.", "prereq": ["noun_gender_number"]},
+    {"rank": 10, "id": "common_prepositions", "name": "Basic prepositions (di, a, da, in, con, su, per, tra/fra)", "cefr": "A1", "why": "Glue of every sentence; extremely high frequency.", "prereq": []},
+    {"rank": 11, "id": "articulated_prepositions", "name": "Articulated prepositions (del, al, dalla, nel, sul...)", "cefr": "A1", "why": "Preposition + article fuse constantly (di+il=del).", "prereq": ["common_prepositions", "definite_articles"]},
+    {"rank": 12, "id": "questions_negation", "name": "Yes/no questions & negation (non)", "cefr": "A1", "why": "Word order barely changes; 'non' before the verb negates it.", "prereq": ["essere_present", "avere_present"]},
+    {"rank": 13, "id": "question_words", "name": "Question words (chi, cosa, dove, quando, come, perché, quanto)", "cefr": "A1", "why": "Needed to ask for any information.", "prereq": ["questions_negation"]},
+    {"rank": 14, "id": "c_e_ci_sono", "name": "c'è / ci sono (there is / there are)", "cefr": "A1", "why": "Existence and availability — everyday staple.", "prereq": ["essere_present"]},
+    {"rank": 15, "id": "possessives", "name": "Possessive adjectives (il mio, la tua, i suoi...)", "cefr": "A1", "why": "Take an article in Italian; high frequency.", "prereq": ["definite_articles", "adjective_agreement"]},
+    {"rank": 16, "id": "irregular_present_common", "name": "Common irregular present verbs (andare, fare, stare, dare, venire, potere, volere, dovere, sapere, dire)", "cefr": "A1", "why": "The most-used verbs are irregular; must be memorized early.", "prereq": ["regular_are_present"]},
+    {"rank": 17, "id": "passato_prossimo", "name": "Passato prossimo (avere/essere + past participle)", "cefr": "A2", "why": "The default past tense in speech; agreement with essere.", "prereq": ["avere_present", "essere_present", "irregular_present_common"]},
+    {"rank": 18, "id": "reflexive_verbs", "name": "Reflexive verbs (mi chiamo, si alza...)", "cefr": "A2", "why": "Daily-routine verbs; changes auxiliary to essere in the past.", "prereq": ["regular_are_present"]},
+    {"rank": 19, "id": "direct_object_pronouns", "name": "Direct object pronouns (lo, la, li, le, mi, ti, ci, vi)", "cefr": "A2", "why": "Avoids repeating nouns; affects participle agreement.", "prereq": ["passato_prossimo"]},
+    {"rank": 20, "id": "indirect_object_pronouns", "name": "Indirect object pronouns (mi, ti, gli, le, ci, vi)", "cefr": "A2", "why": "'to/for someone'; core of verbs like piacere.", "prereq": ["direct_object_pronouns"]},
+    {"rank": 21, "id": "piacere", "name": "piacere (to like) construction", "cefr": "A2", "why": "Inverted structure (mi piace) trips every learner; very frequent.", "prereq": ["indirect_object_pronouns"]},
+    {"rank": 22, "id": "future_simple", "name": "Future tense (parlerò, sarò...)", "cefr": "A2", "why": "Plans and predictions; also common for probability.", "prereq": ["regular_are_present", "irregular_present_common"]},
+    {"rank": 23, "id": "imperfetto", "name": "Imperfetto (ongoing/habitual past)", "cefr": "A2", "why": "Pairs with passato prossimo to narrate the past correctly.", "prereq": ["passato_prossimo"]},
+    {"rank": 24, "id": "imperativo", "name": "Imperative (commands: guarda!, senta, andiamo)", "cefr": "A2", "why": "Directions, instructions, requests; formal vs informal forms.", "prereq": ["irregular_present_common"]},
+    {"rank": 25, "id": "comparatives", "name": "Comparatives & superlatives (più/meno... di/che, il più)", "cefr": "A2", "why": "Everyday comparison of people, things, options.", "prereq": ["adjective_agreement"]},
+    {"rank": 26, "id": "ne_ci_particles", "name": "Particles ne and ci", "cefr": "B1", "why": "High-frequency, low-transparency; needed to sound natural.", "prereq": ["direct_object_pronouns"]},
+    {"rank": 27, "id": "condizionale", "name": "Conditional (vorrei, potrei...)", "cefr": "B1", "why": "Politeness and hypotheticals; 'vorrei' is essential courtesy.", "prereq": ["future_simple"]},
+    {"rank": 28, "id": "congiuntivo_present", "name": "Present subjunctive (penso che sia...)", "cefr": "B1", "why": "Opinion, doubt, emotion; marks educated speech.", "prereq": ["condizionale", "irregular_present_common"]},
+    {"rank": 29, "id": "relative_pronouns", "name": "Relative pronouns (che, cui, il quale)", "cefr": "B1", "why": "Combines clauses into complex sentences.", "prereq": ["direct_object_pronouns"]},
+    {"rank": 30, "id": "hypotheticals", "name": "Hypothetical sentences (se + condizionale/congiuntivo)", "cefr": "B1", "why": "'If I were... I would...' — real conversational range.", "prereq": ["condizionale", "congiuntivo_present"]}
+  ]
+}

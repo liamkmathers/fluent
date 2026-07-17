@@ -86,6 +86,8 @@ Use this exact structure. Fill in values from the databases; compute percentages
 **Level:** {n}/5 {stars}
 **Words Known:** {count}
 **Words Mastered:** {count}
+**Everyday Coverage:** {coverage_bar} {coverage_pct}% — you understand ~{coverage_pct}% of everyday {target_language}
+**Next milestone:** {words_to_next_band} more words → {next_band}% coverage
 **Progress:** {progress_bar}
 **Last Practiced:** {date_or_never}
 

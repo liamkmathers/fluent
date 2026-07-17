@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "language": "{target_language}",
+    "last_updated": "{YYYY-MM-DD}",
+    "total_utterances_scored": 0,
+    "scoring_tier": "{azure|heuristic}"
+  },
+  "summary": {
+    "avg_pronunciation": 0,
+    "avg_accuracy": 0,
+    "avg_fluency": 0,
+    "avg_completeness": 0
+  },
+  "problem_sounds": {
+    "example_phoneme": {
+      "phoneme": "{e.g. gli, gn, r, ci/ce}",
+      "occurrences": 0,
+      "avg_accuracy": 0,
+      "example_words": []
+    }
+  },
+  "utterances": [
+    {
+      "utterance_id": "{unique_identifier}",
+      "date": "{YYYY-MM-DD}",
+      "reference": "{sentence the learner was asked to say}",
+      "recognized_text": "{what STT heard}",
+      "tier": "{azure|heuristic}",
+      "scores": {
+        "pronunciation": 0,
+        "accuracy": 0,
+        "fluency": 0,
+        "completeness": 0
+      },
+      "flagged_words": []
+    }
+  ]
+}

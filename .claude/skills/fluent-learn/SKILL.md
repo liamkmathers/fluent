@@ -34,6 +34,12 @@ Need all 6 DBs. If any missing, direct the learner to `/fluent-setup` and stop.
 - **Weak patterns:** `mistakes-db.error_patterns` where `mastery_level <= 2` (descending by frequency)
 - **Recent performance:** `progress-db.weekly_summary`
 - **Skills not practiced recently:** check `mastery-db.skills_mastery.{skill}.last_practiced`
+- **Next new vocabulary (frequency order):** run
+  `python3 "${CLAUDE_PLUGIN_ROOT:-${CLAUDE_PROJECT_DIR:-.}}/curriculum/next_items.py" select --n 8 --content-only --json`
+  to get the most useful unlearned words + current coverage %.
+- **Next grammar rule:** the first rule in `curriculum/italian-grammar-syllabus.json`
+  the learner hasn't mastered yet *and* whose `prereq` rules are already mastered.
+  Introduce grammar in that utility order.
 
 ### 3. Greet
 
@@ -70,7 +76,10 @@ Plan a 20-min session:
 1. **Warm-up (3 min)** — easy vocabulary recognition on already-strong words. Builds confidence.
 2. **Targeted drill 1 (7 min)** — top weak pattern. 3-4 isolated exercises + 1 application.
 3. **Targeted drill 2 (5 min)** — second weak pattern. Same structure.
-4. **Integration (5 min)** — short writing or speaking task that forces both patterns together.
+4. **New material (5 min)** — introduce the next frequency-ordered words and/or the
+   next grammar rule from Step 2, used in context. After presenting new words, run
+   `curriculum/next_items.py mark --words "..."` so they aren't re-introduced.
+5. **Integration (5 min)** — short writing or speaking task that forces the new + weak patterns together.
 
 Run one exercise at a time with immediate feedback via `fluent-feedback-formatter`.
 
@@ -190,6 +199,7 @@ After 4 exercises, accuracy is 55% (target zone). Hold difficulty; introduce pat
 - **Always load all 6 DBs at start.** Missing context → generic, demotivating content.
 - **One exercise at a time.**
 - **Interleave.** Don't drill one pattern for 20 min — mix 2-3 patterns to force discrimination.
+- **Context, not word soup.** New words follow frequency order, but always appear inside sentences built from already-known words + mastered grammar (the i+1 rule). Never present frequency words as a disconnected "word = translation" list — the learner should be forming real sentences from day one.
 - **Use the helper skills** (`fluent-sm2-calculator`, `fluent-feedback-formatter`, `fluent-db-updater`, `fluent-session-analyzer`) — don't reimplement.
 - **Use the learner's name + target-language greetings** throughout.
 - **Celebrate progress.** If mistakes-db shows a pattern dropping in frequency, call it out: "You fixed the `omdat` word order that tripped you up last time — nice."

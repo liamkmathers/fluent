@@ -10,6 +10,30 @@ https://github.com/user-attachments/assets/66d68aad-210a-452d-b405-b58c13f42f53
 
 ---
 
+## 🔱 This fork adds
+
+This is a fork of [**Fluent** by Mohammad Kermani (m98)](https://github.com/m98/fluent),
+tuned for learning **Italian** with two additions:
+
+### 🎙️ Voice practice — `/fluent-speaking-voice`
+The tutor **speaks** Italian aloud, you **answer out loud**, and your speech is
+transcribed and **scored for pronunciation** (down to specific sounds like `gli`,
+`gn`, the rolled `r`). Runs **free and offline** by default (macOS `say` +
+local Whisper); optional Azure key unlocks phoneme-level scoring. No Anthropic or
+OpenAI API required. See [`voice/`](voice/).
+
+### 📊 Frequency-first curriculum
+Learn the words that matter most, in order. Built from a real Italian frequency
+corpus: the top **~2,000 words cover ~80%** of everyday Italian. New words are
+always taught **in context** (i+1 comprehensible input) with a grammar backbone,
+so you form real sentences from day one — never disconnected word lists.
+`/fluent-progress` shows your live **coverage %**. See [`curriculum/`](curriculum/).
+
+> Both features are additive — every original Fluent command still works. Credit
+> and thanks to [m98](https://github.com/m98) for the foundation. MIT licensed.
+
+---
+
 
 
 ## 🚀 Quick Start
@@ -17,21 +41,36 @@ https://github.com/user-attachments/assets/66d68aad-210a-452d-b405-b58c13f42f53
 ### 1. Install
 
 ```bash
-claude plugin marketplace add m98/fluent && claude plugin install fluent@m98
+claude plugin marketplace add liamkmathers/fluent && claude plugin install fluent@liamkmathers
 ```
 
 One line. Registers the marketplace, installs the plugin. Works globally from any directory after this.
+
+*(Prefer a clone? `git clone https://github.com/liamkmathers/fluent` and run Claude Code from inside it.)*
 
 ### 2. Start learning
 
 Restart Claude Code, then:
 
 ```
-/fluent-setup     # onboard: name, target language, level, goals
-/fluent-learn     # begin your first session
+/fluent-setup            # onboard: name, target language (Italian), level, goals
+/fluent-learn            # begin your first session (frequency-first)
+/fluent-speaking-voice   # spoken practice with pronunciation scoring
 ```
 
 That's it.
+
+### 3. (Optional) Enable voice input
+
+Voice **output** works out of the box on macOS. For voice **input** + pronunciation
+scoring, install the local audio stack once:
+
+```bash
+pip install -r voice/requirements.txt   # sounddevice, numpy, faster-whisper
+python3 voice/stt.py --check             # verify it's ready
+```
+
+Fully offline, no API keys. See [`voice/README.md`](voice/README.md) for cloud options.
 
 ---
 

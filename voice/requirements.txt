@@ -1,0 +1,11 @@
+# Fluent voice layer — install with:  pip install -r voice/requirements.txt
+#
+# Core (local, offline, free) — needed for --record and local transcription:
+sounddevice>=0.4.6        # mic capture (needs PortAudio: `brew install portaudio` if wheel fails)
+numpy>=1.24               # silence detection / audio buffer
+faster-whisper>=1.0       # local speech-to-text (downloads model on first run)
+
+# Optional cloud backends — only if you choose them via FLUENT_*_BACKEND:
+# openai>=1.0                              # OpenAI TTS + Whisper API
+# elevenlabs>=1.0                          # ElevenLabs TTS
+# azure-cognitiveservices-speech>=1.37     # Azure TTS + phoneme-level pronunciation scoring

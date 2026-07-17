@@ -16,6 +16,10 @@ myfile.txt
 !/data/.gitkeep
 !/results/.gitkeep
 
+# Large raw frequency corpora (regenerable — see curriculum/sources/README.md).
+# The processed curriculum/*-frequency.json IS committed.
+/curriculum/sources/*.txt
+
 # System files
 .DS_Store
 *.swp
